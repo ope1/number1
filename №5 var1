@@ -3,24 +3,26 @@
 #include <locale.h>
 using namespace std;
 int main (void) 
-{   setlocale (LC_ALL, "RUS");
+{   
+	setlocale (LC_ALL, "RUS");
 	char c;
 	int k,i;
+	const int alphabet_size = 33;
 	const char*a="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-	const char*b="ABVGDEYJZIYKLMNOPRSTUFHLCSLlbbEYY";
-	const char*p="000000O0000000000000000LHHLbl00UA";
-	const char*q="00000000000000000000000000L000000";
+	const char*b="ABVGDEYJZIYKLMNOPRSTUFHTCSSlbbEYY";
+	const char*p="000000O0000000000000000SCHCbl00UA";
+	const char*q="00000000000000000000000000H000000";
 	ifstream f;
-	f.open("C:\\Users\\ALEX\\Desktop\\f.txt");
+	f.open("D:\\Users\\1081_3\\shmarin\\f.txt");
 	ofstream g;
-	g.open("C:\\Users\\ALEX\\Desktop\\g.txt");
+	g.open("D:\\Users\\1081_3\\shmarin\\g.txt");
 	while (!f.eof())
 	{
 		f.get(c);
 		if (f==NULL)
 		return 0;
 		k=0;
-		for (i=0;(i < 33)&&(k == 0);i++)
+		for (i=0;(i < alphabet_size)&&(k == 0);i++)
 			if (c == a[i])
 				k=1;      
 		if (k == 1)
