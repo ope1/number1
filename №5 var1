@@ -8,10 +8,10 @@ int main (void)
 	char c;
 	int k,i;
 	const int alphabet_size = 33;
-	const char*a="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-	const char*b="ABVGDEYJZIYKLMNOPRSTUFHTCSSlbbEYY";
-	const char*p="000000O0000000000000000SCHCbl00UA";
-	const char*q="00000000000000000000000000H000000";
+	const char*a="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+	const char*b="ABVGDEYZZIYKLMNOPRSTUFHTCSSlbbEYYabvgdeyzziyklmnoprstufhtcsslbbeyy";
+	const char*p="000000OH000000000000000SCHCbl00UA000000oh000000000000000schcbl00ua";
+	const char*q="00000000000000000000000000H00000000000000000000000000000000h000000";
 	ifstream f;
 	f.open("f.txt");
 	ofstream g;
