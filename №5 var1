@@ -13,9 +13,9 @@ int main (void)
 	const char*p="000000O0000000000000000SCHCbl00UA";
 	const char*q="00000000000000000000000000H000000";
 	ifstream f;
-	f.open("D:\\Users\\1081_3\\shmarin\\f.txt");
+	f.open("f.txt");
 	ofstream g;
-	g.open("D:\\Users\\1081_3\\shmarin\\g.txt");
+	g.open("g.txt");
 	while (!f.eof())
 	{
 		f.get(c);
