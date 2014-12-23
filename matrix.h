@@ -15,7 +15,8 @@ public:
 	Matrix(Matrix& a);
 	Matrix operator + (const Matrix& a) const;
 	Matrix operator - (const Matrix& a) const;
-	Matrix operator * (const Matrix& a) const; //Matrix multiple(Matrix& a);
-	Matrix operator * (const int& n) const; //Matrix multiple_k(int& k);
+	Matrix operator * (const Matrix& a) const;
+	Matrix operator * (const int& k) const;
 };
+
 
