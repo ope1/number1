@@ -17,6 +17,7 @@ Matrix::~Matrix()
 {
 	for (int i = 0; i < n; i++)
 		delete x[i];
+	delete[] x;
 }
 
 Matrix::Matrix(Matrix& a)
@@ -50,8 +51,10 @@ Matrix Matrix::operator - (const Matrix& a) const
 	return z;
 }
 
-Matrix Matrix::operator * (const Matrix& a) const //Matrix Matrix::multiple(Matrix& a)
+Matrix Matrix::operator * (const Matrix& a) const
 {
+   if (n != m)
+	return -1;
 	Matrix z(n, a.m);
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < m; j++)
@@ -60,7 +63,7 @@ Matrix Matrix::operator * (const Matrix& a) const //Matrix Matrix::multiple(Matr
 	return z;
 }
 
-Matrix Matrix::operator * (const int& k) const //Matrix Matrix::multiple_k(int& k)
+Matrix Matrix::operator * (const int& k) const
 {
 	Matrix z(n, m);
 	for (int i = 0; i < n; i++)
